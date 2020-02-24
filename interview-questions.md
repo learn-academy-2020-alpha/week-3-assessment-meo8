@@ -44,8 +44,13 @@ Answer the following questions. First, without external resources. Challenge you
 3. What is the difference between a class and an object?
 
   **Your answer:**
+  An object can be created by using the new keyword followed by the class name.
+  Class is used like a template or blueprint.
 
   **Researched answer:**
+  A class is a blueprint of an object that contains properties and method. The constructor method can specify initial values for the instance's properties.
+  An object is an instance of a class. It will inherit all properties, values, and methods of the class, but it's also possible to add or remove those properties, values, and methods.
+
 
 4. What is the difference between a HTML div and a span?
 
@@ -53,6 +58,7 @@ Answer the following questions. First, without external resources. Challenge you
   The `span` is an inline element mainly used to style something specifically, while the `div` is a block element meaning there is a line break before and after it.
 
   **Researched answer:**
+  The `span` tag is inline and usually used inside a line such as a `p` tag. A `div` tag is block-line which is the equavlent to having a line-break before and after it and are used to group later snippets of code.
 
 5. What is React.Fragment and why would you want to use it?
 
@@ -60,6 +66,18 @@ Answer the following questions. First, without external resources. Challenge you
   `React.Fragment` is used to encapsulate all JSX code so that a random `div` is not rendered on the actual HTML page.
 
   **Researched answer:**
+  Fragments let you group a list of children elements without add extra nodes to the DOM.
+  Fragments declared explicitly (`<React.Fragment>`), may have keys when mapping an array. `key` is the only attribute that can be passed to Fragment.
+
+  example)
+  ```
+  {props.items.map(item => (
+        // Without the `key`, React will fire a key warning
+        <React.Fragment key={item.id}>
+          <li>Item Value</li>
+        </React.Fragment>
+      ))}
+  ```
 
 6. What are three options for creating responsive design?
 
@@ -69,6 +87,9 @@ Answer the following questions. First, without external resources. Challenge you
   - Media queries
 
   **Researched answer:**
+  - Flexible layouts - Using a flexible grid to create the website layout that will dynamically resize to any width.
+  - Media queries - An extension to media types when targeting and including styles. Media queries allow you to specify different styles for specific browser and device circumstances.
+  - Flexible media - Makes media (images, video and other formats) scalable, by changing the size of the media as the size of the viewport changes.
 
 ## Looking Ahead: Terms for Next Week
 
