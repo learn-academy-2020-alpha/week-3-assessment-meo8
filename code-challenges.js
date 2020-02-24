@@ -19,14 +19,12 @@ const fibonacci = () => {
   // n1 and n2's value will change within a loop
   let n1 = 0;
   let n2 = 1;
-  // answer variable will store the sum of n1 and n2
-  let answer;
   // result array will store the sum of each n1/n2 answers
   let result = [];
   // for loop will execute 10 times
-  for (let i = n1; i < 10; i++) {
+  for (let i = 0; i < 10; i++) {
     // answer's value is summed up
-    answer = n1 + n2;
+    let answer = n1 + n2;
     // answer is pushed to the result array
     result.push(answer);
     // Numbers are updated for next sequence
@@ -36,7 +34,7 @@ const fibonacci = () => {
   return result;
 }
 
-fibonacci()
+console.log(fibonacci());
 
 
 
@@ -56,8 +54,8 @@ const sortedOddNums = (arr) => {
   return arr.filter(num => typeof num === "number" && num % 2 !== 0).sort((a, b) => a - b);
 }
 
-sortedOddNums(fullArr1);
-sortedOddNums(fullArr2);
+console.log(sortedOddNums(fullArr1));
+console.log(sortedOddNums(fullArr2));
 
 
 
@@ -70,31 +68,27 @@ var middleLetters2 = "rhinoceros" // 10 / 2 = 5 (even)
 // Expected output: “oc”
 
 // if string is odd, plus 1 then divide by 2
-// if string is even, just divide by 2, but also return the letter after it
+// if string is even, divide by 2 and return the letter before it
 
 const medianLetter = (str) => {
   // Variable to store letter location
   let index;
-  // New array to store and split each letter
-  let strArr = str.split("");
-  // Variable to store array  length
-  let length = strArr.length;
   // Checking for odd numbers
-  if (length % 2 !== 0) {
+  if (str.length % 2 !== 0) {
     // Calculation to find median for odd numbers
-    index = (length + 1) / 2;
+    index = (str.length + 1) / 2;
     // Array index starts at 0 so must subtract by 1 to retrieve correct location
-    return strArr[index - 1];
+    return str[index - 1];
   }
   // For for even numbers
-  else if (length % 2 === 0) {
-    index = length / 2;
-    return (strArr[index - 1] + strArr[index]);
+  else if (str.length % 2 === 0) {
+    index = str.length / 2;
+    return (str[index - 1] + str[index]);
   }
 }
 
-medianLetter(middleLetters1);
-medianLetter(middleLetters2);
+console.log(medianLetter(middleLetters1));
+console.log(medianLetter(middleLetters2));
 
 
 
@@ -117,9 +111,9 @@ let sphere1 = new Sphere(-10);
 let sphere2 = new Sphere(45);
 let sphere3 = new Sphere("Hello");
 
-sphere1.getArea()
-sphere2.getArea()
-sphere3.getArea()
+console.log(sphere1.getArea());
+console.log(sphere2.getArea());
+console.log(sphere3.getArea());
 
 
 // --------------------5) Create a function that takes in an array and returns an array of the accumulating sum. An empty array should return an empty array.
@@ -140,6 +134,6 @@ const accuSum = (arr) => {
   return arr.map(num => answer = answer + num);
 }
 
-accuSum(numbersToAdd1);
-accuSum(numbersToAdd2);
-accuSum(numbersToAdd3);
+console.log(accuSum(numbersToAdd1));
+console.log(accuSum(numbersToAdd2));
+console.log(accuSum(numbersToAdd3));
